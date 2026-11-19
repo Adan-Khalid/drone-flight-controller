@@ -1,0 +1,44 @@
+[project]
+name = "fcboard"
+version = "0.1.0"
+description = "Design calculations, simulation runners and log analysis for a 4-layer STM32H743 drone flight controller board."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Adan Khalid" }]
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=2.0",
+    "scipy>=1.13",
+    "matplotlib>=3.9",
+    "pyyaml>=6.0",
+]
+
+[dependency-groups]
+dev = [
+    "easyeda2kicad>=1.0.1",
+    "pypdfium2>=5.15.2",
+    "pytest>=8.3",
+    "ruff>=0.6",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/fcboard"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "NPY"]
+
+[tool.ruff.lint.per-file-ignores]
+# the board generators write KiCad's file format and quote long library names and URLs
+"hardware/gen/*" = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

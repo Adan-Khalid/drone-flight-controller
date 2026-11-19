@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this design, please cite it as below."
+title: "Drone flight controller: a 4-layer STM32H743 board for ArduPilot"
+type: software
+authors:
+  - family-names: Khalid
+    given-names: Adan
+    affiliation: "NUST College of Electrical and Mechanical Engineering"
+version: 0.1.0
+license: CERN-OHL-P-2.0
+keywords:
+  - flight controller
+  - PCB design
+  - KiCad
+  - ArduPilot
+  - STM32H743
+  - drone
+  - SPICE simulation

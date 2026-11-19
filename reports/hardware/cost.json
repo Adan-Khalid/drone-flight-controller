@@ -1,0 +1,779 @@
+{
+  "summary": {
+    "part_types": 45,
+    "parts_placed": 93,
+    "smt_joints_per_board": 430,
+    "parts_cost_per_board_usd": 55.38,
+    "lcsc_data_fetched": [
+      "2026-11-17"
+    ],
+    "unpriced": [],
+    "zero_lcsc_stock": [
+      "C29823 (1206B475K500NT)",
+      "C15849 (CL10A105KB8NNNC)"
+    ],
+    "estimates": [
+      {
+        "boards_assembled": 2,
+        "shipping": "shipping_epost_0_15kg",
+        "pcb": 24.7,
+        "assembly_fees": 171.09,
+        "parts": 110.76,
+        "shipping_usd": 11.69,
+        "total": 318.24
+      },
+      {
+        "boards_assembled": 2,
+        "shipping": "shipping_dhl_0_15kg",
+        "pcb": 24.7,
+        "assembly_fees": 171.09,
+        "parts": 110.76,
+        "shipping_usd": 35.46,
+        "total": 342.01
+      },
+      {
+        "boards_assembled": 5,
+        "shipping": "shipping_epost_0_15kg",
+        "pcb": 24.7,
+        "assembly_fees": 197.75,
+        "parts": 276.9,
+        "shipping_usd": 11.69,
+        "total": 511.04
+      },
+      {
+        "boards_assembled": 5,
+        "shipping": "shipping_dhl_0_15kg",
+        "pcb": 24.7,
+        "assembly_fees": 197.75,
+        "parts": 276.9,
+        "shipping_usd": 35.46,
+        "total": 534.81
+      }
+    ]
+  },
+  "lines": [
+    {
+      "lcsc": "C1525",
+      "refs": [
+        "C1",
+        "C6",
+        "C19",
+        "C20",
+        "C21",
+        "C22",
+        "C23",
+        "C24",
+        "C25",
+        "C28",
+        "C31",
+        "C34",
+        "C35",
+        "C36",
+        "C37",
+        "C38",
+        "C39",
+        "C41"
+      ],
+      "qty": 18,
+      "value": "100nF",
+      "footprint": "C_0402_1005Metric",
+      "model": "CL05B104KO5NNNC",
+      "maker": "Samsung Electro-Mechanics",
+      "stock": 4629000,
+      "min_buy": 100,
+      "unit_usd": 0.0024,
+      "line_usd": 0.0432
+    },
+    {
+      "lcsc": "C15850",
+      "refs": [
+        "C11",
+        "C14",
+        "C15",
+        "C16",
+        "C26",
+        "C40"
+      ],
+      "qty": 6,
+      "value": "10uF",
+      "footprint": "C_0805_2012Metric",
+      "model": "CL21A106KAYNNNE",
+      "maker": "Samsung Electro-Mechanics",
+      "stock": 1836140,
+      "min_buy": 20,
+      "unit_usd": 0.0314,
+      "line_usd": 0.1884
+    },
+    {
+      "lcsc": "C1576",
+      "refs": [
+        "C13"
+      ],
+      "qty": 1,
+      "value": "6.8pF",
+      "footprint": "C_0402_1005Metric",
+      "model": "0402CG6R8C500NT",
+      "maker": "FH",
+      "stock": 104600,
+      "min_buy": 100,
+      "unit_usd": 0.0023,
+      "line_usd": 0.0023
+    },
+    {
+      "lcsc": "C29823",
+      "refs": [
+        "C2",
+        "C12"
+      ],
+      "qty": 2,
+      "value": "4.7uF",
+      "footprint": "C_1206_3216Metric",
+      "model": "1206B475K500NT",
+      "maker": "FH",
+      "stock": 0,
+      "min_buy": 10,
+      "unit_usd": 0.0803,
+      "line_usd": 0.1606
+    },
+    {
+      "lcsc": "C23630",
+      "refs": [
+        "C29",
+        "C30"
+      ],
+      "qty": 2,
+      "value": "2.2uF",
+      "footprint": "C_0603_1608Metric",
+      "model": "CL10A225KO8NNNC",
+      "maker": "Samsung Electro-Mechanics",
+      "stock": 718400,
+      "min_buy": 50,
+      "unit_usd": 0.0101,
+      "line_usd": 0.0202
+    },
+    {
+      "lcsc": "C15849",
+      "refs": [
+        "C3",
+        "C4"
+      ],
+      "qty": 2,
+      "value": "1uF",
+      "footprint": "C_0603_1608Metric",
+      "model": "CL10A105KB8NNNC",
+      "maker": "Samsung Electro-Mechanics",
+      "stock": 0,
+      "min_buy": 50,
+      "unit_usd": 0.0147,
+      "line_usd": 0.0294
+    },
+    {
+      "lcsc": "C1548",
+      "refs": [
+        "C32",
+        "C33"
+      ],
+      "qty": 2,
+      "value": "15pF",
+      "footprint": "C_0402_1005Metric",
+      "model": "0402CG150J500NT",
+      "maker": "FH",
+      "stock": 237600,
+      "min_buy": 100,
+      "unit_usd": 0.0026,
+      "line_usd": 0.0052
+    },
+    {
+      "lcsc": "C15195",
+      "refs": [
+        "C5"
+      ],
+      "qty": 1,
+      "value": "10nF",
+      "footprint": "C_0402_1005Metric",
+      "model": "CL05B103KB5NNNC",
+      "maker": "Samsung Electro-Mechanics",
+      "stock": 1510400,
+      "min_buy": 100,
+      "unit_usd": 0.0038,
+      "line_usd": 0.0038
+    },
+    {
+      "lcsc": "C52923",
+      "refs": [
+        "C7",
+        "C10",
+        "C17",
+        "C18",
+        "C27"
+      ],
+      "qty": 5,
+      "value": "1uF",
+      "footprint": "C_0402_1005Metric",
+      "model": "CL05A105KA5NQNC",
+      "maker": "Samsung Electro-Mechanics",
+      "stock": 301800,
+      "min_buy": 100,
+      "unit_usd": 0.0056,
+      "line_usd": 0.028
+    },
+    {
+      "lcsc": "C1569",
+      "refs": [
+        "C8"
+      ],
+      "qty": 1,
+      "value": "4.7pF",
+      "footprint": "C_0402_1005Metric",
+      "model": "0402CG4R7C500NT",
+      "maker": "FH",
+      "stock": 299600,
+      "min_buy": 100,
+      "unit_usd": 0.0058,
+      "line_usd": 0.0058
+    },
+    {
+      "lcsc": "C77101",
+      "refs": [
+        "C9"
+      ],
+      "qty": 1,
+      "value": "47uF",
+      "footprint": "C_1210_3225Metric",
+      "model": "GRM32ER61C476KE15L",
+      "maker": "muRata",
+      "stock": 28585,
+      "min_buy": 5,
+      "unit_usd": 0.2181,
+      "line_usd": 0.2181
+    },
+    {
+      "lcsc": "C83851",
+      "refs": [
+        "D1"
+      ],
+      "qty": 1,
+      "value": "SMBJ30A",
+      "footprint": "D_SMB",
+      "model": "SMBJ30A",
+      "maker": "Littelfuse",
+      "stock": 15840,
+      "min_buy": 5,
+      "unit_usd": 0.1278,
+      "line_usd": 0.1278
+    },
+    {
+      "lcsc": "C2286",
+      "refs": [
+        "D2"
+      ],
+      "qty": 1,
+      "value": "red",
+      "footprint": "LED_0603_1608Metric",
+      "model": "KT-0603R",
+      "maker": "Hubei KENTO Elec",
+      "stock": 6098300,
+      "min_buy": 100,
+      "unit_usd": 0.0077,
+      "line_usd": 0.0077
+    },
+    {
+      "lcsc": "C2290",
+      "refs": [
+        "D3"
+      ],
+      "qty": 1,
+      "value": "white",
+      "footprint": "LED_0603_1608Metric",
+      "model": "KT-0603W",
+      "maker": "Hubei KENTO Elec",
+      "stock": 1583150,
+      "min_buy": 50,
+      "unit_usd": 0.0124,
+      "line_usd": 0.0124
+    },
+    {
+      "lcsc": "C160407",
+      "refs": [
+        "J1"
+      ],
+      "qty": 1,
+      "value": "ESC",
+      "footprint": "JST_SH_SM08B-SRSS-TB_1x08-1MP_P1.00mm_Horizontal",
+      "model": "SM08B-SRSS-TB(LF)(SN)",
+      "maker": "JST",
+      "stock": 159150,
+      "min_buy": 5,
+      "unit_usd": 0.3144,
+      "line_usd": 0.3144
+    },
+    {
+      "lcsc": "C114218",
+      "refs": [
+        "J2"
+      ],
+      "qty": 1,
+      "value": "microSD",
+      "footprint": "microSD_HC_Hirose_DM3AT-SF-PEJM5",
+      "model": "DM3AT-SF-PEJM5",
+      "maker": "HRS",
+      "stock": 13802,
+      "min_buy": 1,
+      "unit_usd": 1.4042,
+      "line_usd": 1.4042
+    },
+    {
+      "lcsc": "C165948",
+      "refs": [
+        "J3"
+      ],
+      "qty": 1,
+      "value": "USB-C",
+      "footprint": "USB_C_Receptacle_HRO_TYPE-C-31-M-12",
+      "model": "TYPE-C-31-M-12",
+      "maker": "Korean Hroparts Elec",
+      "stock": 492595,
+      "min_buy": 5,
+      "unit_usd": 0.1888,
+      "line_usd": 0.1888
+    },
+    {
+      "lcsc": "C133065",
+      "refs": [
+        "J5",
+        "J6"
+      ],
+      "qty": 2,
+      "value": "TELEM1",
+      "footprint": "JST_GH_SM06B-GHS-TB_1x06-1MP_P1.25mm_Horizontal",
+      "model": "SM06B-GHS-TB(LF)(SN)",
+      "maker": "JST",
+      "stock": 25840,
+      "min_buy": 5,
+      "unit_usd": 0.3091,
+      "line_usd": 0.6182
+    },
+    {
+      "lcsc": "C3151182",
+      "refs": [
+        "L1"
+      ],
+      "qty": 1,
+      "value": "2.2uH",
+      "footprint": "L_Coilcraft_XAL4020-XXX",
+      "model": "XAL4020-222MEC",
+      "maker": "Coilcraft",
+      "stock": 13262,
+      "min_buy": 1,
+      "unit_usd": 2.229,
+      "line_usd": 2.229
+    },
+    {
+      "lcsc": "C79317",
+      "refs": [
+        "L2"
+      ],
+      "qty": 1,
+      "value": "2.2uH",
+      "footprint": "L_Murata_DFE201610P",
+      "model": "DFE201612P-2R2M=P2",
+      "maker": "muRata",
+      "stock": 5495,
+      "min_buy": 5,
+      "unit_usd": 0.0959,
+      "line_usd": 0.0959
+    },
+    {
+      "lcsc": "C840100",
+      "refs": [
+        "Q1"
+      ],
+      "qty": 1,
+      "value": "CSD18543Q3A",
+      "footprint": "TI_VSON-8_3.3x3.3mm_P0.65mm_NexFET_GatePad0.47mm",
+      "model": "CSD18543Q3A",
+      "maker": "TI",
+      "stock": 763,
+      "min_buy": 1,
+      "unit_usd": 1.3469,
+      "line_usd": 1.3469
+    },
+    {
+      "lcsc": "C25859",
+      "refs": [
+        "R1"
+      ],
+      "qty": 1,
+      "value": "18.2k",
+      "footprint": "R_0402_1005Metric",
+      "model": "0402WGF1822TCE",
+      "maker": "UNI-ROYAL",
+      "stock": 15800,
+      "min_buy": 100,
+      "unit_usd": 0.0012,
+      "line_usd": 0.0012
+    },
+    {
+      "lcsc": "C25744",
+      "refs": [
+        "R10",
+        "R12",
+        "R15",
+        "R16",
+        "R17",
+        "R18",
+        "R19",
+        "R20",
+        "R21"
+      ],
+      "qty": 9,
+      "value": "10k",
+      "footprint": "R_0402_1005Metric",
+      "model": "0402WGF1002TCE",
+      "maker": "UNI-ROYAL",
+      "stock": 4070400,
+      "min_buy": 100,
+      "unit_usd": 0.0015,
+      "line_usd": 0.0135
+    },
+    {
+      "lcsc": "C11702",
+      "refs": [
+        "R11",
+        "R13",
+        "R14"
+      ],
+      "qty": 3,
+      "value": "1k",
+      "footprint": "R_0402_1005Metric",
+      "model": "0402WGF1001TCE",
+      "maker": "UNI-ROYAL",
+      "stock": 17422000,
+      "min_buy": 100,
+      "unit_usd": 0.0013,
+      "line_usd": 0.0039
+    },
+    {
+      "lcsc": "C26083",
+      "refs": [
+        "R2"
+      ],
+      "qty": 1,
+      "value": "1M",
+      "footprint": "R_0402_1005Metric",
+      "model": "0402WGF1004TCE",
+      "maker": "UNI-ROYAL",
+      "stock": 1011300,
+      "min_buy": 100,
+      "unit_usd": 0.0011,
+      "line_usd": 0.0011
+    },
+    {
+      "lcsc": "C25905",
+      "refs": [
+        "R22",
+        "R23"
+      ],
+      "qty": 2,
+      "value": "5.1k",
+      "footprint": "R_0402_1005Metric",
+      "model": "0402WGF5101TCE",
+      "maker": "UNI-ROYAL",
+      "stock": 1271800,
+      "min_buy": 100,
+      "unit_usd": 0.0014,
+      "line_usd": 0.0028
+    },
+    {
+      "lcsc": "C25867",
+      "refs": [
+        "R25",
+        "R26"
+      ],
+      "qty": 2,
+      "value": "1.5k",
+      "footprint": "R_0402_1005Metric",
+      "model": "0402WGF1501TCE",
+      "maker": "UNI-ROYAL",
+      "stock": 316100,
+      "min_buy": 100,
+      "unit_usd": 0.0029,
+      "line_usd": 0.0058
+    },
+    {
+      "lcsc": "C25091",
+      "refs": [
+        "R27",
+        "R28",
+        "R29",
+        "R30",
+        "R35"
+      ],
+      "qty": 5,
+      "value": "220",
+      "footprint": "R_0402_1005Metric",
+      "model": "0402WGF2200TCE",
+      "maker": "UNI-ROYAL",
+      "stock": 919500,
+      "min_buy": 100,
+      "unit_usd": 0.0019,
+      "line_usd": 0.0095
+    },
+    {
+      "lcsc": "C270632",
+      "refs": [
+        "R3"
+      ],
+      "qty": 1,
+      "value": "191k",
+      "footprint": "R_0402_1005Metric",
+      "model": "0402WGF1913TCE",
+      "maker": "UNI-ROYAL",
+      "stock": 25700,
+      "min_buy": 100,
+      "unit_usd": 0.0012,
+      "line_usd": 0.0012
+    },
+    {
+      "lcsc": "C25741",
+      "refs": [
+        "R4",
+        "R7"
+      ],
+      "qty": 2,
+      "value": "100k",
+      "footprint": "R_0402_1005Metric",
+      "model": "0402WGF1003TCE",
+      "maker": "UNI-ROYAL",
+      "stock": 1767100,
+      "min_buy": 100,
+      "unit_usd": 0.0009,
+      "line_usd": 0.0018
+    },
+    {
+      "lcsc": "C26972",
+      "refs": [
+        "R5"
+      ],
+      "qty": 1,
+      "value": "28.7k",
+      "footprint": "R_0402_1005Metric",
+      "model": "0402WGF2872TCE",
+      "maker": "UNI-ROYAL",
+      "stock": 41100,
+      "min_buy": 100,
+      "unit_usd": 0.0014,
+      "line_usd": 0.0014
+    },
+    {
+      "lcsc": "C27009",
+      "refs": [
+        "R6"
+      ],
+      "qty": 1,
+      "value": "453k",
+      "footprint": "R_0402_1005Metric",
+      "model": "0402WGF4533TCE",
+      "maker": "UNI-ROYAL",
+      "stock": 669300,
+      "min_buy": 100,
+      "unit_usd": 0.0016,
+      "line_usd": 0.0016
+    },
+    {
+      "lcsc": "C22859",
+      "refs": [
+        "R8"
+      ],
+      "qty": 1,
+      "value": "10",
+      "footprint": "R_0603_1608Metric",
+      "model": "0603WAF100JT5E",
+      "maker": "UNI-ROYAL",
+      "stock": 964620,
+      "min_buy": 20,
+      "unit_usd": 0.0019,
+      "line_usd": 0.0019
+    },
+    {
+      "lcsc": "C25755",
+      "refs": [
+        "R9"
+      ],
+      "qty": 1,
+      "value": "150k",
+      "footprint": "R_0402_1005Metric",
+      "model": "0402WGF1503TCE",
+      "maker": "UNI-ROYAL",
+      "stock": 776200,
+      "min_buy": 100,
+      "unit_usd": 0.0011,
+      "line_usd": 0.0011
+    },
+    {
+      "lcsc": "C2941042",
+      "refs": [
+        "U1"
+      ],
+      "qty": 1,
+      "value": "LM74700-Q1",
+      "footprint": "SOT-23-6",
+      "model": "LM74700QDBVRQ1",
+      "maker": "TI",
+      "stock": 11093,
+      "min_buy": 1,
+      "unit_usd": 2.7592,
+      "line_usd": 2.7592
+    },
+    {
+      "lcsc": "C3232508",
+      "refs": [
+        "U10"
+      ],
+      "qty": 1,
+      "value": "DPS368",
+      "footprint": "Infineon_PG-VLGA-8_2x2.5mm_P0.65mm_DPS368",
+      "model": "DPS368XTSA1",
+      "maker": "Infineon",
+      "stock": 10783,
+      "min_buy": 1,
+      "unit_usd": 4.4253,
+      "line_usd": 4.4253
+    },
+    {
+      "lcsc": "C462660",
+      "refs": [
+        "U2"
+      ],
+      "qty": 1,
+      "value": "LT8641",
+      "footprint": "ADI_UDC-18_3x4mm_P0.5mm_LT8641",
+      "model": "LT8641EUDC#TRPBF",
+      "maker": "ADI",
+      "stock": 3006,
+      "min_buy": 1,
+      "unit_usd": 11.2081,
+      "line_usd": 11.2081
+    },
+    {
+      "lcsc": "C3235557",
+      "refs": [
+        "U3"
+      ],
+      "qty": 1,
+      "value": "TPS2116",
+      "footprint": "SOT-583-8",
+      "model": "TPS2116DRLR",
+      "maker": "TI",
+      "stock": 60979,
+      "min_buy": 1,
+      "unit_usd": 0.3803,
+      "line_usd": 0.3803
+    },
+    {
+      "lcsc": "C141836",
+      "refs": [
+        "U4"
+      ],
+      "qty": 1,
+      "value": "TLV62569DBV",
+      "footprint": "SOT-23-5",
+      "model": "TLV62569DBVR",
+      "maker": "TI",
+      "stock": 617180,
+      "min_buy": 5,
+      "unit_usd": 0.0681,
+      "line_usd": 0.0681
+    },
+    {
+      "lcsc": "C2862740",
+      "refs": [
+        "U5"
+      ],
+      "qty": 1,
+      "value": "TPS7A2033",
+      "footprint": "SOT-23-5",
+      "model": "TPS7A2033PDBVR",
+      "maker": "TI",
+      "stock": 116065,
+      "min_buy": 5,
+      "unit_usd": 0.2044,
+      "line_usd": 0.2044
+    },
+    {
+      "lcsc": "C7519",
+      "refs": [
+        "U6"
+      ],
+      "qty": 1,
+      "value": "USBLC6-2SC6",
+      "footprint": "SOT-23-6",
+      "model": "USBLC6-2SC6",
+      "maker": "ST",
+      "stock": 35030,
+      "min_buy": 5,
+      "unit_usd": 0.1585,
+      "line_usd": 0.1585
+    },
+    {
+      "lcsc": "C5271084",
+      "refs": [
+        "U7"
+      ],
+      "qty": 1,
+      "value": "STM32H743VIT6",
+      "footprint": "LQFP-100_14x14mm_P0.5mm",
+      "model": "STM32H743VIT6TR",
+      "maker": "ST",
+      "stock": 484,
+      "min_buy": 1,
+      "unit_usd": 12.212,
+      "line_usd": 12.212
+    },
+    {
+      "lcsc": "C22459454",
+      "refs": [
+        "U8"
+      ],
+      "qty": 1,
+      "value": "ICM-45686",
+      "footprint": "TDK_LGA-14_3x2.5mm_P0.5mm_ICM-45686",
+      "model": "ICM-45686",
+      "maker": "TDK InvenSense",
+      "stock": 661,
+      "min_buy": 1,
+      "unit_usd": 10.3136,
+      "line_usd": 10.3136
+    },
+    {
+      "lcsc": "C194919",
+      "refs": [
+        "U9"
+      ],
+      "qty": 1,
+      "value": "BMI088",
+      "footprint": "Bosch_LGA-16_4.5x3mm_P0.5mm_LayoutBorder7x1y_ClockwisePinNumbering",
+      "model": "BMI088",
+      "maker": "Bosch",
+      "stock": 1191,
+      "min_buy": 1,
+      "unit_usd": 6.3937,
+      "line_usd": 6.3937
+    },
+    {
+      "lcsc": "C403948",
+      "refs": [
+        "Y1"
+      ],
+      "qty": 1,
+      "value": "8MHz",
+      "footprint": "Crystal_SMD_3225-4Pin_3.2x2.5mm",
+      "model": "TAXM8M4RFDCET2T",
+      "maker": "Yajingxin",
+      "stock": 49645,
+      "min_buy": 5,
+      "unit_usd": 0.1634,
+      "line_usd": 0.1634
+    }
+  ]
+}

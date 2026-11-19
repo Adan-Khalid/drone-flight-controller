@@ -1,0 +1,56 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-19T10:43:28",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.8",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/65114fa8-8777-518a-8f70-7e503e250b44",
+            "violations": []
+        },
+        {
+            "path": "/Power/",
+            "uuid_path": "/65114fa8-8777-518a-8f70-7e503e250b44/023280d1-372a-59f3-8cc7-59a95b3e45c4",
+            "violations": []
+        },
+        {
+            "path": "/Processor/",
+            "uuid_path": "/65114fa8-8777-518a-8f70-7e503e250b44/aaaad96c-afb8-57bb-9c70-6d0632bfce22",
+            "violations": []
+        },
+        {
+            "path": "/Sensors and storage/",
+            "uuid_path": "/65114fa8-8777-518a-8f70-7e503e250b44/ea0f9131-7eec-59ea-834b-161442e89332",
+            "violations": []
+        },
+        {
+            "path": "/Connectors and interfaces/",
+            "uuid_path": "/65114fa8-8777-518a-8f70-7e503e250b44/0e8348e4-14e4-59ac-9ee7-1b62740e598f",
+            "violations": []
+        }
+    ],
+    "source": "dronefc.kicad_sch"
+}

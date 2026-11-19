@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "dronefc")(type "KiCad")(uri "${KIPRJMOD}/lib/dronefc.kicad_sym")(options "")(descr "Project symbols"))
+)

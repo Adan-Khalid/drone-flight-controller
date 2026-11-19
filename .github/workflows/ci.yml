@@ -37,6 +37,12 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
+      - name: KiCad's default library tables (the first-run step the container skips)
+        run: |
+          mkdir -p "$HOME/.config/kicad/10.0"
+          cp /usr/share/kicad/template/sym-lib-table /usr/share/kicad/template/fp-lib-table \
+            "$HOME/.config/kicad/10.0/"
+
       - name: Schematic matches the circuit description, pin by pin
         run: python3 hardware/gen/check_netlist.py
 

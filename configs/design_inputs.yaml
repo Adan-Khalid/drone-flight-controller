@@ -1,0 +1,161 @@
+# Design inputs for the flight controller. Every value is either taken from a source listed in
+# docs/RESEARCH_LOG.md (the code in brackets) or marked "design target" / "allowance", which
+# means it is my own engineering choice, to be replaced by a measured or datasheet value later.
+
+battery:
+  cells_min: 2
+  cells_max: 6
+  cell_v_min: 3.0        # V, LiPo safe minimum [W1]
+  cell_v_nominal: 3.7    # V [W1]
+  cell_v_full: 4.2       # V, standard LiPo full charge [W1]
+  cell_v_full_hv: 4.45   # V, high-voltage LiPo full charge [W1]
+
+# ---------------------------------------------------------------- 5 V regulator: ADI LT8641
+lt8641:                  # datasheet Rev B (08/18) [W22]
+  vfb_typ: 0.81          # V, feedback reference, typical
+  vfb_min: 0.79          # V, over temperature
+  vfb_max: 0.822         # V, over temperature
+  rt_k_per_mhz: 46.5     # RT = 46.5 / fSW - 5.2 (kOhm, MHz), equation 3
+  rt_offset_k: 5.2
+  t_on_min_max_ns: 50    # minimum on-time, maximum value
+  t_off_min_max_ns: 110  # minimum off-time, maximum value
+  vsw_top: 0.3           # V, top switch drop at maximum load (approximate)
+  vsw_bot: 0.15          # V, bottom switch drop at maximum load (approximate)
+  rds_top_ohm: 0.105     # top switch on-resistance, typical
+  rds_bot_ohm: 0.055     # bottom switch on-resistance, typical
+  ilim_top_min_a: 6.2    # top switch current limit, minimum (low duty cycle)
+  ilim_typ_dc08_a: 6.4   # typical current limit at duty cycle 0.8
+  tr_ss_ua: [1.2, 1.9, 2.6]  # TR/SS source current min, typ, max (uA)
+  theta_ja_c_per_w: 40.0 # 3 x 4 mm QFN, JEDEC board
+  tj_max_c: 125.0        # LT8641E operating junction temperature
+  vin_abs_max: 65.0      # V
+  iout_continuous_a: 3.5
+
+lt8641_choice:           # values from ADI's "2MHz 5V, 3.5A Step-Down Converter" typical application
+  rt_k: 18.2             # kOhm (Table 1: 2.0 MHz)
+  r_top_k: 1000.0        # kOhm, FB divider top (R1)
+  r_bot_k: 191.0         # kOhm, FB divider bottom (R2)
+  resistor_tol: 0.01     # 1 % resistors, as the datasheet recommends
+  inductor_uh: 2.2       # Vishay IHLP2525CZ-01 in the typical application
+  cout_uf: 47.0          # 1210 X5R/X7R
+  css_nf: 10.0           # TR/SS capacitor
+
+# ---------------------------------------------------------------- 3.3 V for the processor
+tlv62569:                # TI TLV62569 datasheet SLVSDG1C (Oct 2017) [W20]
+  vfb_typ: 0.6           # V
+  fsw_mhz: 1.5
+  rds_hs_ohm: 0.100
+  rds_ls_ohm: 0.060
+  ilim_a: 3.0            # DBV package, high-side current limit, typical
+  theta_ja_c_per_w: 188.2  # SOT-23-5 (DBV)
+  inductor_uh: 2.2       # datasheet example (XAL4020-222ME)
+  r_bot_k: 100.0         # my choice; datasheet: R2 at most 200 k, 6.8 pF feed-forward for 100 k
+  vout_target: 3.3
+
+ap2112k:                 # Diodes AP2112 datasheet DS39724 Rev 2-2 [W6], kept for comparison
+  theta_ja_c_per_w: 184.0  # SOT25, no heatsink
+  tj_max_c: 150.0
+  imax_a: 0.6
+
+# ---------------------------------------------------------------- loads
+loads_3v3_a:             # on the processor 3.3 V rail
+  stm32h743_typ: 0.220   # DS12110 Rev 7 Table 130, 480 MHz, VOS0, all peripherals on, typical [M4]
+  stm32h743_max_85c: 0.436  # same table, maximum at Tj = 85 C
+  microsd_allowance: 0.100  # allowance (design choice), to be measured at bring-up
+  leds_and_misc_allowance: 0.020  # allowance
+
+loads_sensor_3v3_a:      # on the low-noise sensor LDO (TPS7A2033)
+  icm45686: 0.00042      # 6-axis low-noise mode, TDK product page [S1]
+  bmi088_gyro: 0.005     # BMI088 datasheet r1.9 [S4]
+  bmi088_accel: 0.00015  # [S4]
+  dps368_allowance: 0.001  # allowance; datasheet lists microamps at 1 Hz [S12]
+
+loads_5v_a:              # straight from the 5 V rail
+  can_transceiver_max: 0.070   # TCAN1044V, dominant into 60 Ohm, maximum [W21]
+  can_device: 0.500            # DroneCAN: 500 mA maximum per device [W16]
+  gps_allowance: 0.150         # allowance until the GPS module is chosen
+  telemetry_allowance: 0.300   # allowance until the radio is chosen
+  receiver_allowance: 0.100    # allowance until the receiver is chosen
+
+supply_5v:
+  load_target_a: 2.0           # design target (R2)
+  ripple_target_mvpp: 50.0     # design target (R2)
+
+ambient_c: 45.0                # design assumption: hot day inside a drone frame in Pakistan
+
+# ---------------------------------------------------------------- battery voltage sensing
+battery_sense:
+  r_top_k: 150.0               # my choice
+  r_bot_k: 10.0                # my choice
+  c_filter_nf: 100.0           # my choice
+  adc_full_scale_v: 3.3        # ADC reference = 3.3 V rail
+  adc_bits: 12
+  adc_rain_max_k: 50.0         # DS12110 Rev 7, ADC characteristics, external input impedance max [M4]
+  adc_csample_pf: 4.0          # internal sample-and-hold capacitor, typical [M4]
+  tvs_clamp_v: 48.4            # SMBJ30A clamp at 12.4 A [W3]
+
+# ---------------------------------------------------------------- copper
+traces:                        # IPC-2221 as implemented in KiCad 10.0 [T18]
+  k_external: 0.048
+  k_internal: 0.024
+  outer_copper_mm: 0.035       # JLCPCB 4-layer 1.6 mm stack-up JLC04161H-7628 [J10]
+  inner_copper_mm: 0.0152      # same stack-up
+  delta_t_c: 10.0              # design choice: 10 C temperature rise
+  currents_a: [0.5, 1.0, 2.0, 3.5]
+
+dshot:
+  rate_bps: 600000             # DShot600, "recommended for most vehicles" [F11]
+  bits_per_frame: 16
+
+# ---------------------------------------------------------------- 5 V regulator options compared
+regulator_options:
+  LT8641:                      # [W22], price JLCPCB C462660
+    price_usd: 11.14
+    synchronous: true
+    rds_top_ohm: 0.105
+    rds_bot_ohm: 0.055
+    theta_ja_c_per_w: 40.0
+    vin_max_v: 65.0
+    current_rating_a: 3.5
+    min_limit_a: 6.2           # top switch current limit, minimum
+    fsw_khz: 2000
+    inductor_uh: 2.2           # ADI 2 MHz 5 V typical application
+  LMR36520:                    # TI SNVSBF0C (Nov 2025) [W23], price LCSC C2879422
+    price_usd: 1.2174
+    synchronous: true
+    rds_top_ohm: 0.245         # typical; maximum 0.465
+    rds_bot_ohm: 0.165         # typical; maximum 0.310
+    rds_top_max_ohm: 0.465
+    rds_bot_max_ohm: 0.310
+    theta_ja_c_per_w: 42.9
+    vin_max_v: 65.0
+    current_rating_a: 2.0
+    min_limit_a: 1.8           # low-side current limit, minimum
+    fsw_khz: 400
+    inductor_uh: 10.0          # TI design 1, 5 V at 400 kHz
+  TPS54360:                    # TI SLVSBB4G (June 2018) [W5], price LCSC C44377
+    price_usd: 0.6839
+    synchronous: false
+    rds_top_ohm: 0.092         # typical at 12 V; maximum 0.190
+    theta_ja_c_per_w: 42.0
+    vin_max_v: 60.0
+    current_rating_a: 3.5
+    min_limit_a: 4.5           # current limit threshold, minimum
+    fsw_khz: 600               # TI design example
+    inductor_uh: 8.2           # TI design example
+    diode_vf_v: 0.70           # B560C-13-F at 5 A, from the TPS54360 design example
+
+# ---------------------------------------------------------------- circuits simulated in KiCad
+sensor_filter:                 # RC filter between the 5 V rail and the TPS7A2033 sensor LDO
+  r_ohm: 10.0                  # design choice
+  c_uf: 10.0                   # design choice
+  buck_frequencies_mhz: [1.987, 1.5]   # LT8641 with RT 18.2 k; TLV62569
+
+motor_output:                  # series resistor on each motor output
+  v_high: 3.3                  # V, processor output level
+  i_pin_max_ma: 20.0           # DS12110 Rev 7: output current sunk by any I/O pin, maximum [M4]
+  r_series_ohm: 220.0          # design choice, above the minimum for a short to ground
+  c_load_pf: 100.0             # ASSUMPTION for cable plus ESC input, deliberately pessimistic; measure on the scope
+
+battery_step:                  # transient test of the battery divider
+  v_step: 26.7                 # V, 6S high-voltage full

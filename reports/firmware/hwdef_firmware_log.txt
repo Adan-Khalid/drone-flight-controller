@@ -1,0 +1,11 @@
+Processing C:\Users\ADMIN\portfolio\projects\drone-flight-controller\.cache\ardupilot\libraries\AP_HAL_ChibiOS\hwdef\DroneFC-H743\hwdef.dat
+Adding environment BUILD_ABIN True
+Setup for MCU STM32H743xx
+Default parameters path from command line: C:\Users\ADMIN\portfolio\projects\drone-flight-controller\.cache\ardupilot\libraries\AP_HAL_ChibiOS\hwdef\DroneFC-H743\defaults.parm
+Writing hwdef setup in C:\Users\ADMIN\portfolio\projects\drone-flight-controller\.cache\hwdef_out\firmware\hwdef.h
+MCU Flags: cortex-m7 ['-mcpu=cortex-m7', '-mfpu=fpv5-d16', '-mfloat-abi=hard']
+args=['AP_Baro_DPS310::probe', '0', '118']
+Writing DMA map
+Error: Bootloader (..\..\..\..\Tools\bootloaders\DroneFC-H743_bl.bin) does not exist and AP_BOOTLOADER_FLASHING_ENABLED
+Please run: Tools/scripts/build_bootloaders.py DroneFC-H743
+

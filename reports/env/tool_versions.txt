@@ -1,0 +1,17 @@
+Tool versions recorded 2026-11-15
+
+OS: Microsoft Windows 11 Pro 10.0.26300
+CPU: Intel(R) Core(TM) i7-10610U CPU @ 1.80GHz
+RAM: 15.7 GB
+
+KiCad (kicad-cli version): 10.0.8
+KiCad install: winget KiCad.KiCad 10.0.8, per-user, %LOCALAPPDATA%\Programs\KiCad\10.0
+LTspice (LTspice.exe file version): 26.1.1.0
+LTspice install: winget AnalogDevices.LTspice 26.1.1.2 (LTspice64.msi from LTspice.analog.com)
+LTspice: installed but not used by this project (simulation is done in KiCad's built-in ngspice)
+Python (uv venv): Python 3.12.10
+uv: uv 0.13.8 (3d97a6aad 2026-11-12 x86_64-pc-windows-msvc)
+git: git version 2.55.0.windows.5
+
+KiCad simulator: ngspice bundled with KiCad 10.0.8
+Not installed yet: STM32CubeMX, WSL2 with ArduPilot build tools, Mission Planner, Altium Designer

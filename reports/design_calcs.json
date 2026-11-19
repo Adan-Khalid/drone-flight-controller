@@ -1,0 +1,257 @@
+{
+  "input_range": {
+    "v_min": 6.0,
+    "v_max": 25.200000000000003,
+    "v_max_hv": 26.700000000000003
+  },
+  "lt8641": {
+    "rt_ideal_k": 18.05,
+    "rt_chosen_k": 18.2,
+    "rt_nearest_e96_k": 18.2,
+    "fsw_mhz": 1.9871794871794872,
+    "r_top_ideal_k": 988.0123456790124,
+    "vout": 5.050837696335079,
+    "vout_min": 4.844222176144316,
+    "vout_max": 5.21260764715215,
+    "fb_divider_current_ua": 4.240837696335079,
+    "fsw_max_at_hv_mhz": 3.917768509480285,
+    "vin_min_full_frequency": 6.805706978082628,
+    "l_first_choice_uh": 2.617195743962169,
+    "l_chosen_uh": 2.2,
+    "ripple_a": 0.9367710736739615,
+    "peak_at_target_a": 2.4683855368369807,
+    "peak_at_full_a": 3.9683855368369807,
+    "iout_max_low_duty_a": 5.7316144631630195,
+    "iout_max_dc08_a": 5.93161446316302,
+    "l_min_subharmonic_uh": 0.8256275629116705,
+    "ripple_mv_nominal_c": 1.2537430292822407,
+    "ripple_mv_half_c": 2.5074860585644814,
+    "soft_start_ms": {
+      "fastest": 3.115384615384616,
+      "typical": 4.263157894736843,
+      "slowest": 6.750000000000002
+    },
+    "conduction_loss_at_target": {
+      "2S empty": {
+        "vin": 6.0,
+        "conduction_w": 0.3883612565445026,
+        "rise_c": 15.534450261780105
+      },
+      "3S nominal": {
+        "vin": 11.100000000000001,
+        "conduction_w": 0.3110060846186501,
+        "rise_c": 12.440243384746005
+      },
+      "6S full": {
+        "vin": 25.200000000000003,
+        "conduction_w": 0.26008601346297683,
+        "rise_c": 10.403440538519073
+      },
+      "6S HV full": {
+        "vin": 26.700000000000003,
+        "conduction_w": 0.25783399023471965,
+        "rise_c": 10.313359609388787
+      }
+    },
+    "tvs_clamp_margin_v": 16.6
+  },
+  "budget": {
+    "i_3v3_typ": 0.34,
+    "i_3v3_worst": 0.556,
+    "i_sensor": 0.00657,
+    "i_5v_direct": 1.12,
+    "i_5v_typ": 1.4665700000000002,
+    "i_5v_worst": 1.6825700000000001,
+    "target_a": 2.0,
+    "lt8641_rating_a": 3.5,
+    "sensor_ldo_w": 0.01150300366492147,
+    "ambient_c": 45.0,
+    "ap2112k_tj_max_c": 150.0,
+    "ap2112k_imax_a": 0.6,
+    "rail_3v3": {
+      "typical": {
+        "current_a": 0.34,
+        "ldo_w": 0.595284816753927,
+        "ldo_tj_c": 154.53240628272255,
+        "buck_conduction_w": 0.009957122617159564,
+        "buck_tj_c": 46.87393047654943
+      },
+      "worst": {
+        "current_a": 0.556,
+        "ldo_w": 0.973465759162304,
+        "ldo_tj_c": 224.11769968586395,
+        "buck_conduction_w": 0.02662720637870449,
+        "buck_tj_c": 50.01124024047218
+      }
+    },
+    "tlv_r_top_ideal_k": 450.0,
+    "tlv_r_top_k": 453.0,
+    "tlv_vout": 3.318,
+    "tlv_ripple_a": 0.3449506088028338,
+    "tlv_peak_worst_a": 0.728475304401417,
+    "tlv_ilim_a": 3.0
+  },
+  "battery_sense": {
+    "ratio_min_for_tvs": 14.666666666666668,
+    "ratio": 16.0,
+    "v_full_scale": 52.8,
+    "source_impedance_k": 9.375,
+    "rain_max_k": 50.0,
+    "lsb_mv": 12.890625,
+    "cutoff_hz": 169.765272631355,
+    "tau_ms": 0.9375000000000001,
+    "charge_share_error_ppm": 39.99840006399743,
+    "one_lsb_ppm": 244.140625,
+    "pin_voltages": {
+      "2S empty": 0.375,
+      "3S nominal": 0.6937500000000001,
+      "6S full": 1.5750000000000002,
+      "6S HV full": 1.6687500000000002,
+      "TVS clamp": 3.025
+    },
+    "divider_current_ua_at_hv": 166.87500000000003
+  },
+  "traces": {
+    "delta_t_c": 10.0,
+    "widths": [
+      {
+        "current_a": 0.5,
+        "outer_mm": 0.11546933207230708,
+        "inner_mm": 0.6916794887608994
+      },
+      {
+        "current_a": 1.0,
+        "outer_mm": 0.30038652083330486,
+        "inner_mm": 1.7993625790659198
+      },
+      {
+        "current_a": 2.0,
+        "outer_mm": 0.7814374629086279,
+        "inner_mm": 4.680933501068401
+      },
+      {
+        "current_a": 3.5,
+        "outer_mm": 1.6909046663382563,
+        "inner_mm": 10.128785316120833
+      }
+    ]
+  },
+  "dshot": {
+    "bit_us": 1.6666666666666667,
+    "frame_us": 26.666666666666668
+  },
+  "regulator_options": {
+    "LT8641": {
+      "price_usd": 11.14,
+      "synchronous": true,
+      "vin_max_v": 65.0,
+      "survives_clamp": true,
+      "current_rating_a": 3.5,
+      "min_limit_a": 6.2,
+      "margin_over_worst_a": 1.8174299999999999,
+      "fsw_khz": 2000,
+      "inductor_uh": 2.2,
+      "losses_at_2a": {
+        "3S nominal": {
+          "vin": 11.100000000000001,
+          "ic_w": 0.3110060846186501,
+          "ic_rise_c": 12.440243384746005,
+          "diode_w": 0.0
+        },
+        "6S HV full": {
+          "vin": 26.700000000000003,
+          "ic_w": 0.25783399023471965,
+          "ic_rise_c": 10.313359609388787,
+          "diode_w": 0.0
+        }
+      }
+    },
+    "LMR36520": {
+      "price_usd": 1.2174,
+      "synchronous": true,
+      "vin_max_v": 65.0,
+      "survives_clamp": true,
+      "current_rating_a": 2.0,
+      "min_limit_a": 1.8,
+      "margin_over_worst_a": 0.3174299999999999,
+      "fsw_khz": 400,
+      "inductor_uh": 10.0,
+      "losses_at_2a": {
+        "3S nominal": {
+          "vin": 11.100000000000001,
+          "ic_w": 0.8056097353898402,
+          "ic_rise_c": 34.560657648224144,
+          "diode_w": 0.0,
+          "ic_w_max_rds": 1.5221188623178152,
+          "ic_rise_c_max_rds": 65.29889919343427
+        },
+        "6S HV full": {
+          "vin": 26.700000000000003,
+          "ic_w": 0.7205343843755515,
+          "ic_rise_c": 30.91092508971116,
+          "diode_w": 0.0,
+          "ic_w_max_rds": 1.357285369727631,
+          "ic_rise_c_max_rds": 58.22754236131537
+        }
+      }
+    },
+    "TPS54360": {
+      "price_usd": 0.6839,
+      "synchronous": false,
+      "vin_max_v": 60.0,
+      "survives_clamp": true,
+      "current_rating_a": 3.5,
+      "min_limit_a": 4.5,
+      "margin_over_worst_a": 1.8174299999999999,
+      "fsw_khz": 600,
+      "inductor_uh": 8.2,
+      "losses_at_2a": {
+        "3S nominal": {
+          "vin": 11.100000000000001,
+          "ic_w": 0.16745119569831612,
+          "ic_rise_c": 7.032950219329277,
+          "diode_w": 0.7629574076694496
+        },
+        "6S HV full": {
+          "vin": 26.700000000000003,
+          "ic_w": 0.06961454203188423,
+          "ic_rise_c": 2.923810765339138,
+          "diode_w": 1.135162068356962
+        }
+      }
+    }
+  },
+  "simulation_targets": {
+    "battery_step": {
+      "v_step": 26.7,
+      "v_pin_final": 1.66875,
+      "tau_ms": 0.9375000000000001,
+      "v_pin_after_one_tau": 1.0548511825451556,
+      "settle_1pct_ms": 4.317347049363836,
+      "dc_gain_db": -24.082399653118497,
+      "minus3db_gain_db": -27.092699653118498,
+      "cutoff_hz": 169.765272631355
+    },
+    "sensor_filter": {
+      "r_ohm": 10.0,
+      "c_uf": 10.0,
+      "cutoff_hz": 1591.5494309189535,
+      "dc_drop_mv": 65.7,
+      "ldo_input_v": 4.985137696335079,
+      "attenuation_db": {
+        "1.987 MHz": -61.927557495663905,
+        "1.5 MHz": -59.48542743752106
+      }
+    },
+    "motor_output": {
+      "r_min_ohm": 165.0,
+      "r_series_ohm": 220.0,
+      "short_current_ma": 15.0,
+      "c_load_pf": 100.0,
+      "rise_10_90_ns": 48.33894070139683,
+      "settle_1pct_ns": 101.313744091738,
+      "bit_ns": 1666.6666666666667,
+      "rise_fraction_of_bit": 0.029003364420838097
+    }
+  }
+}

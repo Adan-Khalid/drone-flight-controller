@@ -1,0 +1,37 @@
+# Prices used by scripts/bom_cost.py. Every value was read on the page named next to it.
+# Part prices are not kept here: the script reads them from LCSC for each part number.
+
+boards_made: 5          # JLCPCB's minimum bare-board order
+boards_assembled: [2, 5]
+
+pcb:
+  # JLCPCB instant quote, 5 boards, 4 layers, 36 x 36 mm, 1.6 mm, 3 to 4 day build
+  # https://cart.jlcpcb.com/quote, read 15 Nov 2026 (docs/RESEARCH_LOG.md, [J7])
+  price_5_boards_enig: 24.70
+  shipping_epost_0_15kg: 11.69     # 10 to 21 business days
+  shipping_dhl_0_15kg: 35.46       # 3 to 5 business days
+
+assembly_standard:
+  # JLCPCB, "PCB Assembly Cost: What Does the Price Include?", page updated 22 Oct 2026,
+  # https://jlcpcb.com/help/article/pcb-assembly-price, read 17 Nov 2026.
+  # Standard PCBA is the option that allows parts on both sides.
+  setup_double_side: 51.12
+  stencil_double_side: 16.42
+  fixtures_1_to_29_boards: 16.42
+  feeder_loading_per_part_type: 1.53   # "Basic/Extend"
+  smt_per_joint: 0.0016                # 1 to 50,000 joints
+  xray_per_leadless_part_1_to_10: 1.64 # BGA, QFN and other leadless packages
+  packing_base: 0.50
+  # leadless packages on this board (their joints are hidden under the body)
+  leadless_parts: [U2, U8, U9, U10, Q1]
+
+# Ready-made flight controllers for comparison, read on the makers' own stores on 19 Nov 2026
+market:
+  - name: Holybro Kakute H7 V2 (STM32H743, one IMU, 30.5 mm mounting)
+    price: 52.00
+    note: out of stock on the day
+    url: https://holybro.com/products/kakute-h7-v2
+  - name: Holybro Kakute H7 Mini v1.5 (STM32H743, one IMU, 20 mm mounting)
+    price: 82.00
+    note: in stock
+    url: https://holybro.com/products/kakute-h7-mini

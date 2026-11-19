@@ -1,0 +1,5 @@
+# SERIAL7 (USART6) is RC input by default, as on MatekH743-bdshot
+SERIAL7_PROTOCOL 23
+SERIAL7_BAUD 115
+# SERIAL5 (UART8) receives ESC telemetry on the 4-in-1 ESC connector
+SERIAL5_PROTOCOL 16
